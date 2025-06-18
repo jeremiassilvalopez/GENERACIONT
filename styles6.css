@@ -1,0 +1,376 @@
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Contenedor con display: flex */
+/*
+    display: flex hace que los elementos hijos se distribuyan
+    en una "línea flexible" (flex container).
+    Por defecto, los hijos se alinean en fila (horizontalmente).
+*/
+.flex-container {
+    display: flex;
+
+    /* justify-content define cómo se distribuyen los elementos a lo largo del eje principal (horizontal). */
+    justify-content: space-around;
+    /* Esto coloca espacio igual alrededor de cada elemento. */
+
+    /* align-items define cómo se alinean los elementos en el eje transversal (vertical). */
+    align-items: center;
+    /* Esto centra los elementos verticalmente dentro del contenedor. */
+
+    background-color: #fff;
+    border: 2px solid #333;
+    padding: 20px;
+    margin-top: 20px;
+    height: 200px; /* Para visualizar mejor la alineación vertical */
+}
+
+/* Estilo de los elementos hijos */
+/*
+    Los elementos dentro del contenedor flex se denominan "flex items".
+    Se puede aplicarles tamaño, color, márgenes, etc.
+*/
+.item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    flex: 0 1 auto;
+    /* flex: 0 1 auto significa:
+       - flex-grow: 0 (no crecer)
+       - flex-shrink: 1 (puede reducirse si no hay espacio)
+       - flex-basis: auto (tamaño base automático)
+    */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Contenedor base con flex y envoltura */
+/*
+    display: flex; activa el contenedor flex.
+    flex-wrap: wrap; permite que los elementos "salten" a la siguiente línea si no caben en la actual.
+*/
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los hijos se envuelvan a múltiples filas o columnas */
+    border: 2px solid #333;
+    padding: 15px;
+    background-color: #fff;
+    height: 300px; /* Para visualizar mejor el efecto en columnas */
+    gap: 10px; /* Espacio entre elementos */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Dirección: fila normal (por defecto) */
+.direction-row {
+    flex-direction: row; 
+    /* Los elementos se colocan en fila de izquierda a derecha */
+}
+
+/* Dirección: fila invertida */
+.direction-row-reverse {
+    flex-direction: row-reverse;
+    /* Los elementos se colocan en fila pero de derecha a izquierda */
+}
+
+/* Dirección: columna normal */
+.direction-column {
+    flex-direction: column;
+    /* Los elementos se colocan en columna de arriba a abajo */
+}
+
+/* Dirección: columna invertida */
+.direction-column-reverse {
+    flex-direction: column-reverse;
+    /* Los elementos se colocan en columna pero de abajo hacia arriba */
+}
+
+/* Estilo para los elementos flex */
+.item {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    flex: 0 0 120px; /* Tamaño fijo aproximado para ver el wrap */
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Contenedor flex con flex-wrap y altura fija para ver bien align-content */
+/*
+    display: flex; crea un flex container.
+    flex-wrap: wrap; permite múltiples filas.
+    height: 250px; para que se note la distribución vertical.
+*/
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #555;
+    padding: 15px;
+    background-color: #fff;
+    height: 250px;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Variación para experimentar con align-content, align-items y justify-content */
+.alignment-example {
+    flex-direction: row; /* Dirección horizontal */
+    justify-content: space-between;
+    /* Distribuye los elementos con espacio entre ellos en el eje principal (horizontal) */
+
+    align-items: flex-start;
+    /* Alinea los elementos al inicio del eje transversal (vertical) */
+
+    align-content: stretch;
+    /* En contenedores con varias filas, estira las filas para llenar todo el espacio vertical */
+}
+
+/* Opciones para cambiar */
+/* justify-content: space-between, center, flex-start, flex-end, space-around, space-evenly */
+/* align-items: flex-start, center, flex-end, stretch, baseline */
+/* align-content: flex-start, center, flex-end, space-between, space-around, stretch */
+
+/* Estilo para elementos flex */
+.item {
+    background-color: #e91e63;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    flex: 0 0 100px;
+    text-align: center;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Contenedor flex básico */
+.flex-container {
+    display: flex;
+    border: 2px solid #333;
+    background-color: #fff;
+    padding: 15px;
+    gap: 10px;
+    height: 200px; /* Para visualizar mejor alineación vertical */
+}
+
+/* Ejemplo específico para este ejercicio */
+.order-flex-example {
+    flex-wrap: nowrap; /* No envolver */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Estilo general para los items */
+.item {
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    /* Tamaño base */
+    flex-basis: 100px;
+    flex-shrink: 1; /* Pueden reducirse si no hay espacio */
+    flex-grow: 0; /* No crecen por defecto */
+}
+
+/* Reordenamos algunos elementos usando 'order' */
+/*
+    El valor por defecto de order es 0.
+    Valores menores aparecen antes, mayores después.
+*/
+.item1 {
+    order: 2; /* Aparecerá después de los que tengan order menor */
+}
+
+.item2 {
+    order: 1;
+}
+
+.item3 {
+    order: 4;
+}
+
+.item4 {
+    order: 0; /* Primero en aparecer */
+}
+
+.item5 {
+    order: 3;
+}
+
+/* Modificamos flex-grow para que algunos elementos crezcan */
+/* flex-grow: cantidad proporcional de espacio extra que puede tomar */
+.item2 {
+    flex-grow: 2; /* Crecerá el doble que uno con flex-grow: 1 */
+}
+
+.item5 {
+    flex-grow: 1;
+}
+
+/* Modificamos flex-shrink para controlar cuánto pueden encoger */
+/* flex-shrink: cuánto puede reducirse */
+.item3 {
+    flex-shrink: 0; /* No se encogerá */
+}
+
+/* Ajustamos flex-basis para que uno tenga un tamaño base distinto */
+.item4 {
+    flex-basis: 150px; /* Tamaño base más grande */
+}
+
+/* Ajustamos alineación individual con align-self */
+/* Puede ser: auto, flex-start, flex-end, center, baseline, stretch */
+.item3 {
+    align-self: flex-end; /* Este elemento se alinea abajo independientemente */
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body y fuente */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Cabecera */
+/*
+    Usamos flexbox para centrar el título horizontal y verticalmente
+*/
+.header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor principal */
+/*
+    display: flex; organiza sidebar y content en fila horizontal.
+    flex-wrap: wrap; para que en pantallas pequeñas la barra lateral baje debajo.
+    gap: espacio entre sidebar y content.
+*/
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: white;
+    min-height: 400px;
+}
+
+/* Barra lateral */
+/*
+    flex: 1 1 250px;
+    - flex-grow: 1 (puede crecer)
+    - flex-shrink: 1 (puede encoger)
+    - flex-basis: 250px (tamaño base)
+*/
+.sidebar {
+    background-color: #e0e0e0;
+    padding: 20px;
+    flex: 1 1 250px;
+    border-radius: 6px;
+}
+
+/* Lista en barra lateral */
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 15px;
+}
+
+.sidebar a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
+/*
+    flex: 3 1 600px;
+    - ocupa más espacio que sidebar
+    - flex-basis base 600px
+*/
+.content {
+    background-color: #fafafa;
+    padding: 20px;
+    flex: 3 1 600px;
+    border-radius: 6px;
+}
+
+/* Pie de página */
+/*
+    Pie centrado con padding y fondo oscuro
+*/
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* Responsividad */
+/* En pantallas pequeñas (< 700px) hacemos que sidebar y content se apilen verticalmente */
+@media (max-width: 700px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar, .content {
+        flex: 1 1 100%;
+    }
+}

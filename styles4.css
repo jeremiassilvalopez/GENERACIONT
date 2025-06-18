@@ -1,0 +1,270 @@
+/* Ejercicio 1: 5 maneras de seleccionar el #especial */
+#especial {
+    background-color: lightblue; /* Selector por id */
+}
+
+/* Selector universal combinado con id */
+*:is(#especial) {
+    background-color: lightgreen;
+}
+
+/* Selector de tipo + id */
+div#especial {
+    background-color: lightcoral;
+}
+
+/* Selector de atributo (aunque id no es un atributo libre, se puede usar así en CSS) */
+[id="especial"] {
+    background-color: lightgoldenrodyellow;
+}
+
+/* Selector de descendiente que incluye id */
+section#ejercicio1 #especial {
+    background-color: plum;
+}
+
+/* --- Explicación ---
+1. #especial → selecciona por id.
+2. *:is(#especial) → selector universal combinado.
+3. div#especial → elemento div con id.
+4. [id="especial"] → selector de atributo id.
+5. section#ejercicio1 #especial → id dentro de sección específica.
+*/
+
+/* Ejercicio 2: Elementos pares de la lista .lista-items */
+.lista-items li:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Explicación:
+   nth-child(even) → selecciona los elementos en posición par.
+*/
+
+/* Ejercicio 3: Pseudo-clases y pseudo-elementos */
+
+/* ::first-letter */
+#ejercicio3 p:first-of-type::first-letter {
+    font-size: 2em;
+    color: red;
+}
+
+/* :hover en el botón */
+#ejercicio3 button:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+/* :focus en input */
+#ejercicio3 input:focus {
+    border: 2px solid blue;
+}
+
+/* ::selection en p */
+#ejercicio3 p::selection {
+    background: orange;
+    color: white;
+}
+
+/* a:visited (también lo puedes usar en Ejercicio 19) */
+#ejercicio3 a:visited {
+    opacity: 0.5;
+}
+
+/* Explicación:
+ - ::first-letter → primera letra.
+ - :hover → cuando el mouse está sobre el elemento.
+ - :focus → cuando el input tiene foco.
+ - ::selection → cuando seleccionas texto.
+ - :visited → enlaces visitados.
+*/
+
+/* Ejercicio 4: Pseudo-selectores adicionales */
+
+/* :hover en el botón */
+#ejercicio4 button:hover {
+    background-color: lightpink;
+}
+
+/* :focus en input */
+#ejercicio4 input:focus {
+    border: 2px dashed green;
+}
+
+/* Explicación:
+ - :hover y :focus → interacciones visibles con elementos.
+*/
+
+/* Ejercicio 5: Clase .destacado */
+.destacado {
+    color: darkblue;
+}
+
+/* Explicación:
+ - .destacado → selector por clase.
+*/
+
+/* Ejercicio 6: Primer párrafo de cada sección */
+section p:first-of-type {
+    font-weight: bold;
+}
+
+/* Explicación:
+   - p:first-of-type → primer <p> dentro de cada <section>.
+*/
+
+/* Ejercicio 7: Todos los div hijos directos de otro div */
+div > div {
+    border: 2px solid black;
+}
+
+/* Explicación:
+   - div > div → selecciona los <div> que son hijos directos de otro <div>.
+*/
+
+/* Ejercicio 8: Último elemento de una lista ordenada */
+.lista-ordenada li:last-child {
+    font-size: 1.5em;
+}
+
+/* Explicación:
+   - li:last-child → último <li> en la lista ordenada.
+*/
+
+/* Ejercicio 9: Enlaces que NO tienen target="_blank" */
+a:not([target="_blank"]) {
+    text-decoration: underline;
+}
+
+/* Explicación:
+   - a:not([target="_blank"]) → todos los <a> que NO tengan target="_blank".
+*/
+
+/* Ejercicio 10: Párrafos dentro de un article */
+article p {
+    line-height: 1.8;
+}
+
+/* Explicación:
+   - article p → todos los <p> dentro de un <article>.
+*/
+
+/* Ejercicio 11: h2 que tenga un span dentro */
+h2:has(span) {
+    color: darkred;
+}
+
+/* Explicación:
+   - h2:has(span) → <h2> que contenga un <span> (requiere navegador moderno con soporte de :has()).
+   - Si no se soporta, alternativa con JS o estructura de clases.
+*/
+
+/* Ejercicio 12: Imágenes con alt definido */
+img[alt] {
+    border: 3px solid green;
+}
+
+/* Explicación:
+   - img[alt] → imágenes que tienen el atributo alt definido.
+*/
+
+/* Ejercicio 13: Tercer elemento de una lista desordenada */
+.lista-desordenada li:nth-child(3) {
+    font-style: italic;
+}
+
+/* Explicación:
+   - li:nth-child(3) → tercer elemento de la lista.
+*/
+
+/* Ejercicio 14: Elementos impares de una tabla */
+table tr:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+
+/* Explicación:
+   - tr:nth-child(odd) → filas impares de la tabla.
+*/
+
+/* Ejercicio 15: div con al menos dos clases */
+div[class~="clase1"][class~="clase2"] {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Explicación:
+   - div[class~="clase1"][class~="clase2"] → <div> que tenga ambas clases: clase1 y clase2.
+   - También se podría usar selector más general como div[class*=" "], pero este es más preciso.
+*/
+
+/* Ejercicio 16: button con efecto hover */
+button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+/* Explicación:
+   - button:hover → cuando el cursor pasa sobre cualquier <button>.
+*/
+
+/* Ejercicio 17: input de tipo text dentro de un form */
+form input[type="text"] {
+    border: 2px solid purple;
+}
+
+/* Explicación:
+   - input[type="text"] → inputs de tipo text dentro de form.
+*/
+
+/* Ejercicio 18: p que sigue inmediatamente a un h3 */
+h3 + p {
+    color: teal;
+}
+
+/* Explicación:
+   - h3 + p → el <p> que sigue inmediatamente a un <h3>.
+*/
+
+/* Ejercicio 19: enlaces visitados */
+a:visited {
+    opacity: 0.5;
+}
+
+/* Explicación:
+   - a:visited → enlaces ya visitados, se hacen más opacos.
+*/
+
+/* Ejercicio 20: strong dentro de un p */
+p strong {
+    color: crimson;
+}
+
+/* Explicación:
+   - p strong → cualquier <strong> dentro de un <p>.
+*/
+
+/* Ejercicio 21: input deshabilitado */
+input:disabled {
+    background-color: #ccc;
+    color: #666;
+}
+
+/* Explicación:
+   - input:disabled → cualquier input que esté deshabilitado.
+*/
+
+/* Ejercicio 22: li dentro de un nav */
+nav li {
+    margin-bottom: 10px;
+}
+
+/* Explicación:
+   - nav li → todos los <li> dentro de un <nav>, cambio de espaciado (margen inferior).
+*/
+
+/* Ejercicio 23: elementos con 'importante' en la clase */
+[class*="importante"] {
+    font-weight: bold;
+}
+
+/* Explicación:
+   - [class*="importante"] → cualquier elemento cuya clase contenga la palabra "importante".
+*/
