@@ -1,0 +1,234 @@
+/* --- Ejercicio 1: Estructura Responsive Básica y Estilos por Defecto (Escritorio) --- */
+
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    font-size: 18px; /* Tamaño de fuente por defecto para escritorio */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px; /* Ancho máximo para el contenedor principal en escritorio */
+    margin: 30px auto; /* Centra el contenedor y le da margen vertical */
+    padding: 0 25px; /* Padding horizontal para que el contenido no toque los bordes */
+    display: flex; /* Usamos Flexbox para el layout principal (main y sidebar) */
+    gap: 40px; /* Espacio entre el main y el sidebar */
+    box-sizing: border-box; /* Asegura que padding y borde se incluyan en el ancho total */
+}
+
+/* Header */
+header {
+    background-color: #2c3e50; /* Azul oscuro */
+    color: #ecf0f1; /* Blanco grisáceo */
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em; /* Tamaño de título grande para escritorio */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    display: flex; /* Para poner los enlaces del menú en línea */
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan en pantallas más pequeñas */
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #3498db; /* Azul brillante al pasar el ratón */
+}
+
+/* Main Content */
+main {
+    flex: 3; /* El contenido principal ocupa 3 partes del espacio disponible */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.main-content h2 {
+    color: #2980b9; /* Azul medio */
+    margin-bottom: 20px;
+    font-size: 2.2em; /* Tamaño de título para contenido principal */
+}
+
+.main-content p {
+    margin-bottom: 15px;
+}
+
+/* --- Ejercicio 3: Optimización de Imágenes y Tipografía (ya aplicada aquí) --- */
+.main-content img {
+    max-width: 100%; /* **Importante para la responsividad de imágenes** */
+    height: auto; /* Mantiene la relación de aspecto */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+    margin: 25px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1; /* La barra lateral ocupa 1 parte del espacio disponible */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.sidebar h2 {
+    color: #2980b9;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.sidebar ul li a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.ad-block {
+    background-color: #e8f5ff; /* Azul muy claro */
+    border: 1px dashed #3498db;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 8px;
+    color: #2980b9;
+}
+
+.ad-block h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+/* --- Ejercicio 2: Adaptación a Tablets y Móviles (Media Queries) --- */
+
+/* Breakpoint para Tablets (menos de 768px de ancho) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Ajuste de tamaño de fuente para tablets */
+    }
+
+    .container {
+        flex-direction: column; /* Apila el contenido principal y la barra lateral */
+        padding: 0 20px; /* Reduce el padding horizontal del contenedor */
+        margin: 20px auto; /* Ajusta el margen vertical */
+    }
+
+    main, .sidebar {
+        flex: auto; /* Permite que tomen el ancho completo */
+        width: auto; /* Asegura que tomen el ancho disponible */
+        margin-bottom: 25px; /* Espacio entre los elementos apilados */
+        padding: 25px; /* Ajusta el padding interno */
+    }
+
+    header h1 {
+        font-size: 2.2em; /* Título del header más pequeño en tablets */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Apila los enlaces de navegación verticalmente */
+        align-items: center; /* Centra los enlaces apilados */
+    }
+
+    header nav ul li {
+        margin: 8px 0; /* Ajusta el margen vertical para enlaces apilados */
+    }
+
+    .main-content h2 {
+        font-size: 2em; /* Ajusta el tamaño de los títulos de sección */
+    }
+
+    .sidebar h2 {
+        font-size: 1.6em; /* Ajusta el tamaño de los títulos de sidebar */
+    }
+}
+
+/* Breakpoint para Móviles (menos de 480px de ancho) */
+@media (max-width: 480px) {
+    body {
+        font-size: 15px; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .container {
+        padding: 0 15px; /* Reduce aún más el padding horizontal */
+        margin: 15px auto; /* Reduce el margen vertical */
+    }
+
+    header {
+        padding: 18px 0; /* Reduce el padding del header */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Título del header aún más pequeño */
+    }
+
+    header nav ul li {
+        margin: 6px 0; /* Espacio más compacto para enlaces de nav */
+    }
+
+    main, .sidebar {
+        padding: 20px; /* Padding interno más pequeño para main y sidebar */
+        margin-bottom: 20px; /* Espacio entre elementos apilados */
+    }
+
+    .main-content h2 {
+        font-size: 1.8em; /* Títulos de sección más pequeños en móvil */
+    }
+
+    .sidebar h2 {
+        font-size: 1.4em; /* Títulos de sidebar más pequeños en móvil */
+    }
+
+    footer {
+        padding: 18px 0; /* Reduce el padding del footer */
+        font-size: 0.8em; /* Fuente más pequeña en el footer */
+    }
+}
