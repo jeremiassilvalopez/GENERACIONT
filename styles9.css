@@ -1,0 +1,258 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: #4590db;
+  color: #333;
+}
+
+form {
+  background-color: rgb(247, 245, 245);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.2rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 20px); /* Ajusta para el padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total */
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Degradado atractivo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Estilos del Formulario */
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 600px; /* Ancho máximo aumentado */
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho total */
+    animation: fadeIn 1s ease-out; /* Animación de aparición */
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em; /* Tamaño de título más grande */
+}
+
+/* Estilos de Fieldset y Legend */
+fieldset {
+    border: 1px solid #c2e0ff; /* Borde más suave */
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #f9fcff; /* Fondo ligero para fieldset */
+}
+
+legend {
+    font-weight: bold;
+    color: #0056b3; /* Color azul para las leyendas */
+    padding: 0 15px;
+    font-size: 1.2em; /* Tamaño de leyenda más grande */
+    background-color: #e0f2ff; /* Fondo para la leyenda */
+    border-radius: 5px;
+}
+
+/* Estilos de Grupos de Formulario (Label e Input/Textarea) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600; /* Negrita más marcada */
+    color: #444;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px 15px; /* Más padding */
+    border: 1px solid #a8d5ff; /* Borde más suave y azulado */
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    transition: all 0.3s ease; /* Transición suave para focus */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Borde azul al enfocar */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* Sombra al enfocar */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px; /* Altura mínima aumentada */
+}
+
+/* Estilos para el botón de Enviar */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones para hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Pequeño efecto al pasar el ratón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para validación de HTML5 (visualización cuando los campos son inválidos) */
+input:invalid:not(:focus):not(:placeholder-shown),
+textarea:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #dc3545; /* Borde rojo si el campo es inválido y no está enfocado */
+}
+
+input:focus:invalid,
+textarea:focus:invalid {
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.5); /* Sombra roja al enfocar un campo inválido */
+}
